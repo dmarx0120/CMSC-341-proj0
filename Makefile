@@ -1,5 +1,5 @@
 CXX=g++
-CXXFLAGS=-c
+CXXFLAGS=-Wall
 
 all: mytest.o
 
