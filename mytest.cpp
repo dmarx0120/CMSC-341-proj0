@@ -5,7 +5,11 @@
 //Section:	03
 //E - mail: dmarx1@umbc.edu
 
-//Project description
+/*
+This program tests a linked list queue for creating a deep copy, guarding against self-assignment, 
+and for checking edge cases (i.e. checking for exception handling in head() and dequeue()
+when dealing with an empty source queue.
+*/
 
 #include <iostream>
 #include "queue.h"
