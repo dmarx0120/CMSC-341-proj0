@@ -74,6 +74,7 @@ int main()
     {
         intQueue.head();
     }
+    //catch block for range_error exception in dequeue()
     catch (range_error &e)
     {
         cout << e.what() << endl;
@@ -86,6 +87,7 @@ int main()
     {
         intQueue.dequeue();
     }
+    //catch block for range_error exception in dequeue()
     catch (range_error &e)
     {
         cout << e.what() << endl;
@@ -97,6 +99,7 @@ int main()
     cout << "Test 4: Checking for guarding against self-assignment: ------------------------------------------------" << endl;
     try
     {
+        //call overloaded assignment operator
         intQueue2 = intQueue2;
     }
     //catch excpetion if self-assigning or assigning to empty queue.
