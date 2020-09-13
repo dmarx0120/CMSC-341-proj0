@@ -1,6 +1,6 @@
 all: mytest.o
 
 mytest.o: mytest.cpp
-	g++ -c mytest.cpp -o mytest.out
+	g++ -c mytest.cpp -o mytest
 
-clean: rm -rf *o mytest.out
+clean: rm -rf *o mytest
