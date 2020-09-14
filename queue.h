@@ -99,6 +99,7 @@ Queue<T>::Queue() {
 
 template <class T>
 Queue<T>::Queue(const Queue<T>& rhs) {
+    //call the copy queue function
     copyQueue(rhs);
 
     // ********************************
@@ -114,7 +115,7 @@ const Queue<T>& Queue<T>::operator=(const Queue<T>& rhs) {
     {
         throw "Queue<T>::operator=: attempt to self-assign a queue.";
     }
-    //block for guarding against assigning to empty list
+    //block for guarding against assigning to empty list (not needed but helpful)
     else if (rhs.empty())
     {
         throw "Queue<T>::operator=: attempt to assign to an empty queue.";
@@ -145,6 +146,7 @@ Queue<T>::~Queue() {
     _tempOrig = _head;
     while (_tempOrig != nullptr)
     {
+        //craete node pointer for holding next node pointer in copied queue.
         Node<T>* tmpPtrOrig = _tempOrig->_next;
         delete _tempOrig;
         _tempOrig = tmpPtrOrig;
@@ -206,6 +208,7 @@ void Queue<T>::dump() const {
     }
 }
 
+//This function clears the contents of the intended queue.
 template <class T>
 void Queue<T>::clearQueue()
 {
@@ -216,6 +219,7 @@ void Queue<T>::clearQueue()
     }
 }
 
+//This function creates a deep copy of an intended queue.
 template <class T>
 void Queue<T>::copyQueue(const Queue<T>& rhs)
 {
